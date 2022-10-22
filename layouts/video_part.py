@@ -178,6 +178,8 @@ class VideoPart(QVBoxLayout):
             self.video.setFile(item.filename)
         finally:
             self.detect_btn.setEnabled(False)
+            self.play_btn.setEnabled(True)
+            self.track_bar.setEnabled(True)
             self.video.playInRange(item.start, item.end)
             self.track_bar.setPartialRange(item.start, item.end)
 
